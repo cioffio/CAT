@@ -49,7 +49,7 @@ class SplicingDataset(Dataset):
             # self.dataset_list.append(tampCOCO(crop_size, grid_crop, blocks, DCT_channels, "Splicing/data/bcmc_COCO_valid_list.txt"))
             # self.dataset_list.append(compRAISE(crop_size, grid_crop, blocks, DCT_channels, "Splicing/data/compRAISE_valid.txt"))
         elif mode == "arbitrary":
-            self.dataset_list.append(arbitrary(crop_size, grid_crop, blocks, DCT_channels, "./input/*", read_from_jpeg=read_from_jpeg))
+            self.dataset_list.append(arbitrary(crop_size, grid_crop, blocks, DCT_channels, "/tmp/input/*", read_from_jpeg=read_from_jpeg))
         else:
             raise KeyError("Invalid mode: " + mode)
         if class_weight is None:
